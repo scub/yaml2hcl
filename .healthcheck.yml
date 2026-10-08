@@ -1,0 +1,13 @@
+timeout: 10
+verbose: false
+endpoints:
+  - name: Main site
+    url: https://darchoods.net/
+    expect_code: 200
+  - name: QDB
+    url: https://darchoods.net/qdb
+    expect_code: 200
+  # - name: Head Google
+  #   url: https://google.com
+  #   method: HEAD
+  #   expect_Code: 304
