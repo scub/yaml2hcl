@@ -1,3 +1,24 @@
+# [1.1.0](https://github.com/scub/yaml2hcl/compare/v1.0.4...v1.1.0) (2026-10-09)
+
+
+### Bug Fixes
+
+* add go mod verify to goreleaserc ([cdd5268](https://github.com/scub/yaml2hcl/commit/cdd526858ca01fccb4bfdc68d6a4d09bf54af462))
+* appease the golangci linter ([05597fa](https://github.com/scub/yaml2hcl/commit/05597fa50105f24a3002a42003d58ffbdb1b04a6))
+* better release wording ([6627540](https://github.com/scub/yaml2hcl/commit/662754096c0b5fe5f57fee3545bd17ba05d77205))
+* codeql workflow updates ([389b6e4](https://github.com/scub/yaml2hcl/commit/389b6e469b5244ea8d20d6eb0652b380c2c50194))
+* ensure scan coverage in release path ([e7f8dc1](https://github.com/scub/yaml2hcl/commit/e7f8dc1e0149b34f0243931469292831f5b88db9))
+* ensure scan coverage in release path ([0e644ea](https://github.com/scub/yaml2hcl/commit/0e644ea01cbf3d13ea88f1a7ace720de1b0c4d2e))
+* pull_request workflow installs go consistently ([d9c6f5d](https://github.com/scub/yaml2hcl/commit/d9c6f5de98eb12cf3ed40608ec4a3a3c413e359a))
+* update golang to 1.27.2 ([9174c0a](https://github.com/scub/yaml2hcl/commit/9174c0a7bc5b6201efb518e9bc04625048677045))
+* upgrade codeql-action ([c51f0d0](https://github.com/scub/yaml2hcl/commit/c51f0d083aa9e14ba11231fc11b742b8f5f3ad38))
+* upgrade go for real tho ([ede8739](https://github.com/scub/yaml2hcl/commit/ede873994d6cd804a2515c9e1d0df6d1b3d78542))
+
+
+### Features
+
+* upgrade project to golang 1.27.2 ([7ea812d](https://github.com/scub/yaml2hcl/commit/7ea812dbc02dcf8c783e16f31e57cc7c4537a4b1))
+
 ## [1.0.5](https://github.com/scub/yaml2hcl/compare/v1.0.4...v1.0.5) (2026-10-09)
 
 
