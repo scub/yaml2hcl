@@ -33,13 +33,13 @@ archives:
 checksum:
   name_template: "checksums.txt"
 
-changelog:
-  sort: asc
-  filters:
-    exclude:
-      - "^docs:"
-      - "^test:"
-      - "^chore:"
+# changelog:
+#   sort: asc
+#   filters:
+#     exclude:
+#       - "^docs:"
+#       - "^test:"
+#       - "^chore:"
 
 homebrew_casks:
   - name: yaml2hcl
@@ -51,9 +51,14 @@ homebrew_casks:
     homepage: "https://github.com/scub/yaml2hcl"
     description: "CLI tool to convert Helm values to HCL"
     license: "MIT"
+
+    # Skip CI
+    commit_msg_template: "chore: release {{ .ProjectName }} version {{ .Tag }}"
+
     hooks:
       post:
         install: |
           if OS.mac?
             system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/yaml2hcl"]
           end
+
