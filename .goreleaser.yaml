@@ -41,15 +41,19 @@ changelog:
       - "^test:"
       - "^chore:"
 
-brews:
-  - repository:
+homebrew_casks:
+  - name: yaml2hcl
+    repository:
       owner: scub
       name: homebrew-tap
-    directory: Formula
+
+    directory: Casks
     homepage: "https://github.com/scub/yaml2hcl"
-    description: "CLI tool to monitor API health endpoints"
+    description: "CLI tool to convert Helm values to HCL"
     license: "MIT"
-    test: |
-      system "#{bin}/yaml2hcl", "version"
-    install: |
-      bin.install "yaml2hcl"
+    hooks:
+      post:
+        install: |
+          if OS.mac?
+            system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/yaml2hcl"]
+          end
