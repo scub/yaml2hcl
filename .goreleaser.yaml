@@ -53,7 +53,7 @@ homebrew_casks:
     license: "MIT"
 
     # Skip CI
-    commit_msg_template: "chore: release {{ .ProjectName }} version {{ .Tag }}"
+    commit_msg_template: "ci: publish release {{ .ProjectName }} version {{ .Tag }}"
 
     hooks:
       post:
