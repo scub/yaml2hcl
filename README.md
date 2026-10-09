@@ -1,1 +1,3 @@
-https://dev.to/young_gao/building-a-production-ready-cli-tool-with-go-from-zero-to-distribution-240
+# yaml2hcl
+
+This tool converts Helm values files into HCL to use in Terraform.
