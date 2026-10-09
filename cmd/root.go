@@ -36,10 +36,15 @@ func init() {
 	rootCmd.PersistentFlags().BoolP("verbose", "v", false,
 		"enable verbose output")
 
-	viper.BindPFlag("timeout", rootCmd.PersistentFlags().Lookup("timeout"))
-	viper.BindPFlag("verbose", rootCmd.PersistentFlags().Lookup("verbose"))
+	if err := viper.BindPFlag("timeout", rootCmd.Flags().Lookup("timeout")); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
+	if err := viper.BindPFlag("verbose", rootCmd.Flags().Lookup("verbose")); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
 }
-
 
 func initConfig() {
 	if cfgFile != "" {
