@@ -28,10 +28,32 @@ jobs:
       - name: Verify tests pass
         run: go test ./... -v
 
+  static_analysis:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      contents: read
+    env:
+      GO111MODULE: on
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+      - name: Run Gosec Security Scanner
+        uses: securego/gosec@v2.29.0
+        with:
+          args: '-no-fail -fmt sarif -out results.sarif ./...'
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: results.sarif
+
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: verify
+    needs: [verify, static_analysis]
     permissions:
       contents: write
       issues: write
