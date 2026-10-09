@@ -95,6 +95,15 @@
 
 * better release wording ([6627540](https://github.com/scub/yaml2hcl/commit/662754096c0b5fe5f57fee3545bd17ba05d77205))
 * pull_request workflow installs go consistently ([d9c6f5d](https://github.com/scub/yaml2hcl/commit/d9c6f5de98eb12cf3ed40608ec4a3a3c413e359a))
+* upgrade codeql-action ([c51f0d0](https://github.com/scub/yaml2hcl/commit/c51f0d083aa9e14ba11231fc11b742b8f5f3ad38))
+
+## [1.0.5](https://github.com/scub/yaml2hcl/compare/v1.0.4...v1.0.5) (2026-10-09)
+
+
+### Bug Fixes
+
+* better release wording ([6627540](https://github.com/scub/yaml2hcl/commit/662754096c0b5fe5f57fee3545bd17ba05d77205))
+* pull_request workflow installs go consistently ([d9c6f5d](https://github.com/scub/yaml2hcl/commit/d9c6f5de98eb12cf3ed40608ec4a3a3c413e359a))
 
 ## [1.0.5](https://github.com/scub/yaml2hcl/compare/v1.0.4...v1.0.5) (2026-10-09)
 
