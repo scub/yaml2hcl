@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/scub/yaml2hcl/compare/v1.0.0...v1.0.1) (2026-10-09)
+
+
+### Bug Fixes
+
+* test new semantic-release config ([fa0820d](https://github.com/scub/yaml2hcl/commit/fa0820db9b133e1f04fd51eb0eebe1be0dcde37f))
+
 # 1.0.0 (2026-10-09)
 
 
