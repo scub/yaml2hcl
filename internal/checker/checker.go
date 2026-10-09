@@ -77,7 +77,11 @@ func (c *Checker) check(ctx context.Context, ep Endpoint) Result {
 		result.Err = fmt.Errorf("request failed: %w", err)
 		return result
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+	        result.Err = fmt.Errorf("error closing response body: %v", err)
+		}
+	}()
 
 	result.Status = resp.StatusCode
 

@@ -69,5 +69,8 @@ func init() {
 	checkCmd.Flags().StringSliceP("url", "u", nil,
 		"check a single URL (can be repeated)")
 
-	viper.BindPFlag("urls", checkCmd.Flags().Lookup("url"))
+	if err := viper.BindPFlag("urls", rootCmd.Flags().Lookup("url")); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
+	}
 }
