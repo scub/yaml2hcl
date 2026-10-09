@@ -33,13 +33,13 @@ archives:
 checksum:
   name_template: "checksums.txt"
 
-# changelog:
-#   sort: asc
-#   filters:
-#     exclude:
-#       - "^docs:"
-#       - "^test:"
-#       - "^chore:"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
 
 homebrew_casks:
   - name: yaml2hcl
