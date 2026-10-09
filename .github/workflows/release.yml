@@ -5,6 +5,9 @@ on:
     tags:
       - "v*"
 
+env:
+  GOLANG_VERSION: "1.27.2"
+
 permissions:
   contents: write
 
@@ -17,7 +20,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-go@v5
         with:
-          go-version: "1.22"
+          go-version: ${{ env.GOLANG_VERSION }}
       - uses: goreleaser/goreleaser-action@v6
         with:
           version: "~> v2"
