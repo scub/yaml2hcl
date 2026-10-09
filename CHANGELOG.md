@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/scub/yaml2hcl/compare/v1.0.3...v1.0.4) (2026-10-09)
+
+
+### Bug Fixes
+
+* let gorelease generate changelogs ([46b293e](https://github.com/scub/yaml2hcl/commit/46b293ef65d88bf97b4ad93998acdc26a945d593))
+* remove @semantic-release/exec, not using ([78608d7](https://github.com/scub/yaml2hcl/commit/78608d765ef1ef062a95c11b291f5b817d139502))
+
 ## [1.0.3](https://github.com/scub/yaml2hcl/compare/v1.0.2...v1.0.3) (2026-10-09)
 
 
