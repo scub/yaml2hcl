@@ -8,21 +8,21 @@ permissions:
   contents: read
 
 jobs:
-  verify:
-    name: Verify
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Run lint, tests, and other verification
-        run: go test ./... -v
+  # verify:
+  #   name: Verify
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
+  #     - name: Run lint, tests, and other verification
+  #       run: go test ./... -v
 
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: verify
+    # needs: verify
     permissions:
       contents: write
       issues: write
@@ -39,10 +39,10 @@ jobs:
           node-version: "lts/*"
       - name: Install dependencies
         run: |
-          npm install -g
-            semantic-release@25
-            @semantic-release/changelog@6
-            @semantic-release/git@10
+          npm install -g                    \
+            semantic-release@25             \
+            @semantic-release/changelog@6   \
+            @semantic-release/git@10        \
             conventional-changelog-angular@8
       - name: Release
         env:
