@@ -1,0 +1,13 @@
+#!/bin/bash
+
+VERSION="v0.0.0-dev"
+DATE=$(date +%Y-%m-%d-%H.%M.%S)
+COMMIT=$(git rev-parse HEAD)
+PACKAGE="github.com/scub/yaml2hcl"
+
+echo " ${PACKAGE}/cmd.version=${VERSION}"
+
+GOFLAGS=-mod=mod CGO_ENABLED=0 go build \
+    -o bin/yaml2hcl \
+    -ldflags "-X ${PACKAGE}/cmd.version=${VERSION} -X ${PACKAGE}/cmd.commit=${COMMIT} -X ${PACKAGE}/cmd.date=${DATE}" \
+    main.go
