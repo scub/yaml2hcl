@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/scub/yaml2hcl/compare/v1.0.2...v1.0.3) (2026-10-09)
+
+
+### Bug Fixes
+
+* release again ([db259f4](https://github.com/scub/yaml2hcl/commit/db259f4ed3444c97185024b6f83bd0cc4d42664c))
+
 ## [1.0.2](https://github.com/scub/yaml2hcl/compare/v1.0.1...v1.0.2) (2026-10-09)
 
 
