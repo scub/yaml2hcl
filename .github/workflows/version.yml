@@ -43,7 +43,6 @@ jobs:
             semantic-release@25
             @semantic-release/changelog@6
             @semantic-release/git@10
-            @semantic-release/gitlab@12
             conventional-changelog-angular@8
       - name: Release
         env:
